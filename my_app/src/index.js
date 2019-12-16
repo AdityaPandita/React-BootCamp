@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import fruits from './food-del';
+import { choice, remove } from './helpers-del';
+
 import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

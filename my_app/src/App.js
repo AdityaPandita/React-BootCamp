@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import fruits from './food-del';
+import { choice, remove } from './helpers-del';
 
 function App() {
+    var item = choice( fruits);
+    var foodsItem = fruits; 
+
   return (
+      
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -18,7 +24,12 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
+      <div>{'Pick one of the fruits :'+foodsItem}</div>
+      <div>{'Randomly draw a fruit from the array'} + {item}</div>
+      <div>{'Here you go random fruit :'+item+': left :'+ remove( foodsItem, item ).length}</div>
+      <div>Sorry, we're all out.</div>
     </div>
   );
 }
