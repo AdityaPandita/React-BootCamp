@@ -5,6 +5,15 @@ import PokeCard from './Pokecard';
 
 class Pokedex extends Component {
 
+    constructor( props ) {
+
+        super( props );
+        this.state = {
+            clicks : 0,
+            clicked : false
+        }
+    }
+
 
     render(){
 
