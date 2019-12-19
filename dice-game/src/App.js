@@ -21,7 +21,7 @@ function App() {
         </a>
       </header> */}
 
-      <RollDice/>
+      <RollDice className="inline-flex"/>
     </div>
   );
 }

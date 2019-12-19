@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import './Dice.css';
 
 class Dice extends Component {
 
@@ -21,10 +22,10 @@ class Dice extends Component {
 
     render() {
         var cls = this.convertToString( this.props.count );
-        console.log( this.props.count );
+        // console.log( this.props.count );
         return(
             <div>{this.props.count}
-                <i className={this.convertToString( this.props.count )}></i>
+                <i className={'Dice ' + this.convertToString( this.props.count )}></i>
             </div>
         );
     }

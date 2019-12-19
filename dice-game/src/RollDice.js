@@ -24,8 +24,8 @@ class RollDice extends Component {
         return(
             <div>
                 <div className="flex d-inline p-2">
-                    <span><Dice count={this.state.die1}/></span>
-                    <span><Dice count={this.state.die2}/></span>
+                    <Dice count={this.state.die1}/>
+                    <Dice count={this.state.die2}/>
                 </div>
                 <div>
                     <button onClick={this.randomDieCount}> Roll </button>
