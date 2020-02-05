@@ -29,6 +29,18 @@ class RollDice extends Component {
 
         this.setState({ die1 : d1, die2 : d2});
         this.setState({ rolling : true });
+        this.setState({ disabled : true });
+
+        setTimeout( 
+            () => 
+                { 
+                    this.setState({ rolling : false});
+                    this.setState({ disabled : false });
+
+                }, 
+                1000
+            );
+        //this.render();
     }
 
     render() {
@@ -39,7 +51,7 @@ class RollDice extends Component {
                     <Dice count={this.state.die2} rolling={this.state.rolling} />
                 </div>
                 <div>
-                    <button class="purple" onClick={this.randomDieCount} > Roll </button>
+                    <button class="purple btn btn-primary" onClick={this.randomDieCount} disabled={this.state.disabled}> Roll Dice!</button>
                 </div>
             </div>
         );
