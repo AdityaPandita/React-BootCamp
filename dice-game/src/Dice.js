@@ -24,8 +24,9 @@ class Dice extends Component {
         var cls = this.convertToString( this.props.count );
         // console.log( this.props.count );
         return(
-            <div>{this.props.count}
-                <i className={'Dice ' + this.convertToString( this.props.count )}></i>
+            <div >
+                <i className={'Dice ' + this.convertToString( this.props.count ) + 
+                             ( this.props.rolling ? ' rolling' : '' ) }></i>
             </div>
         );
     }
